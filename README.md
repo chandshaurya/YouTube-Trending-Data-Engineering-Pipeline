@@ -19,7 +19,6 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
 
 ## 🏗️ Architecture Diagram
 
-```mermaid
 
     ┌────────────────────────┐
     │  YouTube Data API v3   │
@@ -50,7 +49,7 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
     │  source / transformation│
     │  / destination folders  │
     └────────────────────────┘
-```
+
 ---
 
 ## 🧩 Azure Components Used

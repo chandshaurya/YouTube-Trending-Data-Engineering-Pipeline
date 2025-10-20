@@ -19,6 +19,8 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
 
 ## 🏗️ Architecture Diagram
 
+```mermaid
+
     ┌────────────────────────┐
     │  YouTube Data API v3   │
     └──────────┬─────────────┘
@@ -48,7 +50,7 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
     │  source / transformation│
     │  / destination folders  │
     └────────────────────────┘
-
+```
 ---
 
 ## 🧩 Azure Components Used
@@ -64,6 +66,9 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
 
 ## ⚙️ Pipeline Workflow
 
+<img width="1401" height="255" alt="Job Scheduling" src="https://github.com/user-attachments/assets/15cf5a55-841b-48a2-80cf-64cd0493be5d" />
+
+
 ### **1️⃣ Data Ingestion — `DataFetch`**
 - Fetches trending videos from **14+ countries** (IN, US, GB, JP, FR, DE, BR, CA, KR, RU, ZA, AU, MX, ID).  
 - Retrieves video details:
@@ -71,7 +76,7 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
 - Supports **pagination** to fetch maximum possible results per region.
 - Writes raw data to **Azure Data Lake → `source` container**.
 
-📂 **Path:** `/source/youtube_trending_raw/`
+
 
 ---
 
@@ -83,7 +88,6 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
   - `engagement_rate = (likes + comments) / views`
 - Stores cleaned dataset in **Azure Data Lake → `transformation` container**.
 
-📂 **Path:** `/transformation/youtube_trending_cleaned/`
 
 ---
 
@@ -94,7 +98,7 @@ It showcases a full **Data Engineering workflow** — from API ingestion to data
   - Trending hashtags by region.
 - Saves results into **Azure Data Lake → `destination` container**.
 
-📂 **Path:** `/destination/youtube_trending_analytics/`
+
 
 ---
 
